@@ -15,8 +15,6 @@ files:
 
 1. Remove apache2
 
-.. code-block::
-
     service apache2 stop
     sudo apt remove apache2.*
     sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
@@ -25,15 +23,13 @@ files:
     sudo apt-get autoremove
 
 2. Install pip3
-
-.. code-block::
+'''
 
     sudo apt-get -y install python3-pip
     pip3 install virtualenv
-
+    
+'''
 3. Install nginx, wsgi etc
-
-.. code-block::
 
     sudo apt-get install pythonX.Y-dev
     sudo apt-get install nginx
