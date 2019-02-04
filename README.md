@@ -14,6 +14,7 @@ files:
 
 
 1. Remove apache2
+
 .. code-block::
 
     service apache2 stop
@@ -31,6 +32,7 @@ files:
     pip3 install virtualenv
 
 3. Install nginx, wsgi etc
+
 .. code-block::
 
     sudo apt-get install pythonX.Y-dev
@@ -38,12 +40,14 @@ files:
     pip3 install uwsgi
 
 4. Add sudo users
+
 .. code-block::
 
     sudo adduser newuser
     usermod -aG sudo newuser
 
 5. Create virtualenv and clone project
+
 .. code-block::
 
     virtualenv new-env
