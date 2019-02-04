@@ -23,12 +23,14 @@ files:
     sudo apt-get autoremove
 
 2. Install pip3
+
 '''
 
     sudo apt-get -y install python3-pip
     pip3 install virtualenv
     
 '''
+
 3. Install nginx, wsgi etc
 
     sudo apt-get install pythonX.Y-dev
