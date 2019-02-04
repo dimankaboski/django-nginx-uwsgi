@@ -13,7 +13,9 @@ files:
 проверка портов: sudo lsof -nP -i | grep LISTEN
 
 
-1. Remove apache2
+###### 1. Remove apache2
+
+'''
 
     service apache2 stop
     sudo apt remove apache2.*
@@ -21,8 +23,10 @@ files:
         //or
     sudo apt-get purge apache2 apache2-utils apache2-bin apache2.2-common
     sudo apt-get autoremove
+    
+'''
 
-2. Install pip3
+###### 2. Install pip3
 
 '''
 
@@ -31,24 +35,32 @@ files:
     
 '''
 
-3. Install nginx, wsgi etc
+###### 3. Install nginx, wsgi etc
+
+'''
 
     sudo apt-get install pythonX.Y-dev
     sudo apt-get install nginx
     pip3 install uwsgi
+    
+'''
 
-4. Add sudo users
+###### 4. Add sudo users
 
-.. code-block::
+'''
 
     sudo adduser newuser
     usermod -aG sudo newuser
+    
+'''
 
-5. Create virtualenv and clone project
+###### 5. Create virtualenv and clone project
 
-.. code-block::
+'''
 
     virtualenv new-env
+
+'''
 
 Documentation
 =============
