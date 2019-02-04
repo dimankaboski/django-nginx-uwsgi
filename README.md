@@ -1,6 +1,6 @@
 # django-nginx-uwsgi
 
-OS: Ubuntu 16.04x86_64
+> OS: Ubuntu 16.04x86_64
 
 files:
 
@@ -13,7 +13,7 @@ files:
 проверка портов: sudo lsof -nP -i | grep LISTEN
 
 
-###### 1. Remove apache2
+## 1. Remove apache2
 
 '''
 
@@ -26,7 +26,7 @@ files:
     
 '''
 
-###### 2. Install pip3
+## 2. Install pip3
 
 '''
 
