@@ -1,19 +1,19 @@
 # django-nginx-uwsgi
 
-> OS: Ubuntu 16.04x86_64
-
+OS: Ubuntu 16.04x86_64
 files:
-
-    1. 'mysite_nginx.conf': simple nginx config
-    2. 'mysite_uwsgi.ini': simple uwsgi config
-    3. 'uwsgi_params': uwsgi params
-
+1. 'mysite_nginx.conf': simple nginx config
+2. 'mysite_uwsgi.ini': simple uwsgi config
+3. 'uwsgi_params': uwsgi params
 
 
-проверка портов: sudo lsof -nP -i | grep LISTEN
+main post: 'https://habr.com/ru/post/226419/'
 
+Проверка портов: 
 
-## 1. Remove apache2
+'''
+
+    sudo lsof -nP -i | grep LISTEN
 
 '''
 
@@ -27,8 +27,6 @@ files:
         //or
     sudo apt-get purge apache2 apache2-utils apache2-bin apache2.2-common
     sudo apt-get autoremove
-    
-'''
 
 '''
 
@@ -38,10 +36,6 @@ files:
 
     sudo apt-get -y install python3-pip
     pip3 install virtualenv
-    
-'''
-
-###### 3. Install nginx, wsgi etc
 
 '''
 
@@ -52,10 +46,6 @@ files:
     sudo apt-get install pythonX.Y-dev
     sudo apt-get install nginx
     pip3 install uwsgi
-    
-'''
-
-###### 4. Add sudo users
 
 '''
 
@@ -65,8 +55,6 @@ files:
 
     sudo adduser newuser
     usermod -aG sudo newuser
-    
-'''
 
 '''
 
