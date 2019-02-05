@@ -17,6 +17,10 @@ files:
 
 '''
 
+## 1. Remove apache2
+
+'''
+
     service apache2 stop
     sudo apt remove apache2.*
     sudo apt-get purge apache2 apache2-utils apache2.2-bin apache2-common
@@ -24,6 +28,8 @@ files:
     sudo apt-get purge apache2 apache2-utils apache2-bin apache2.2-common
     sudo apt-get autoremove
     
+'''
+
 '''
 
 ## 2. Install pip3
@@ -39,6 +45,10 @@ files:
 
 '''
 
+## 3. Install nginx, wsgi etc
+
+'''
+
     sudo apt-get install pythonX.Y-dev
     sudo apt-get install nginx
     pip3 install uwsgi
@@ -49,12 +59,18 @@ files:
 
 '''
 
+## 4. Add sudo users
+
+'''
+
     sudo adduser newuser
     usermod -aG sudo newuser
     
 '''
 
-###### 5. Create virtualenv and clone project
+'''
+
+## 5. Create virtualenv and clone project
 
 '''
 
@@ -62,8 +78,33 @@ files:
 
 '''
 
-Documentation
-=============
-main post: 'https://habr.com/ru/post/226419/'
+## 6. Проверка
 
+Создаем файл test.py:
 
+'''
+
+    #test.py
+    def application(env, start_response):
+        start_response('200 OK', [('Content-Type','text/html')])
+        return [b"Hello World"] # python3
+        #return ["Hello World"] # python2
+
+'''
+
+Запускаем uWSGI:
+
+'''
+
+    uwsgi --http :8000 --wsgi-file test.py
+
+'''
+
+В браузере переходим по адресу yourserver.com:8000.
+Видим: «Hello, world», значит, мы все сделали правильно и следующие компоненты работают:
+
+'''
+
+Пользователь <-> uWSGI <-> test.py
+
+'''
