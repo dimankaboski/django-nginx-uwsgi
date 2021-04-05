@@ -29,6 +29,17 @@ main post: 'https://habr.com/ru/post/226419/'
     sudo apt-get -y install python3-pip
     pip3 install virtualenv
 
+## 2. Install python3.7 (Если всё плохо)
+
+    sudo apt-get update
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt update
+    sudo apt install python3.7
+### 2.1 Install python3.7 venv
+
+    sudo apt install python3.7-venv
+    python3.7 -m venv py37-venv
 
 ## 3. Install nginx, wsgi etc
 
