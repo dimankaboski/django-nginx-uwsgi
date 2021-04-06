@@ -36,11 +36,16 @@ main post: 'https://habr.com/ru/post/226419/'
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
     sudo apt install python3.7
-### 2.1 Install python3.7 venv
+    
+### 2.1 Установка дополнительных инструментов
+
+    sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+    
+### 2.2 Install python3.7 venv
 
     sudo apt install python3.7-venv
     python3.7 -m venv py37-venv
-
+  
 ## 3. Install nginx, wsgi etc
 
     
