@@ -37,6 +37,12 @@ main post: 'https://habr.com/ru/post/226419/'
     sudo apt update
     sudo apt install python3.7
     
+## 2.0 порядок запуска для питона (python 3.7 будет запускаться заместо 3.5)
+
+    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.7 1
+    sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 2
+    sudo update-alternatives --config python3
+
 ### 2.1 Установка дополнительных инструментов
 
     sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
@@ -44,7 +50,7 @@ main post: 'https://habr.com/ru/post/226419/'
 ### 2.2 Install python3.7 venv
 
     sudo apt install python3.7-venv
-    python3.7 -m venv py37-venv
+    python3 -m venv py37-venv
   
 ## 3. Install nginx, wsgi etc
 
